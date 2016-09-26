@@ -1,0 +1,27 @@
+<html ng-app="myApp">
+<head>
+    
+    <script src="angular-1.5.8/angular.js"></script>
+</head>
+
+<body>
+
+    <div ng-controller="MainCtrl" >
+        <h1>Clock App <h1>
+        <p>The current time is:  {{date | date:'yyyy-MM-dd hh:MM:ss'}}</p>
+    </div>
+
+
+
+    <script>
+       var module = angular.module("myApp", []);
+       module.controller("MainCtrl", Main);
+
+       function Main($scope){
+           $scope.date = new Date();
+        }
+        
+    </script>
+</body>
+
+</html>
